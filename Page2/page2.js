@@ -6,8 +6,11 @@ function page_load(){
    
     test();
     
+ 
+
     
 }
+
 
 
 //flip cards to the back after 10 seconds
@@ -26,8 +29,8 @@ function flip_time(){
 
 //flip card on click
 document.querySelectorAll('.card-flip').forEach(item => {
-item.addEventListener('click', event => item.classList.toggle('flipped')
-    )});
+item.addEventListener('click', event => item.classList.toggle('flipped'))
+});
         
 
 
@@ -79,132 +82,78 @@ function swap_time_out(){
           
 }
 
-//correct cards
-// var correct = document.querySelectorAll('.card-flip');
 
-// document.querySelectorAll('.card-flip').forEach(item => {
-//     item.addEventListener('click', event => {
-//         if(divs.getAttribute)
+setTimeout(function(){
+  
+let card = document.getElementsByClassName("card-flip");
+let cards = [...card];
 
-//     }
-//         )});
-var oneClick = 0;
-function  setupCookie(){
-    var inputs3 = document.querySelector('.card-flip');
+var openedCards = [];
 
+document.querySelectorAll('.card-flip').forEach(item => {
+    item.addEventListener('click', event => {
+
+
+        var inputs = document.querySelector('.card-flip');
+        var me =  item.getAttribute('value');
     
-        oneClick++;
-        if(oneClick ==1 ){
-            return a();
-        }
-    
-        else if(oneClick ==2){
-            return b();
-        }
+        openedCards.push(me);
 
-        if (a() == b()){
-            alert('yipp');
-        }
-        else{
-            alert('up');
-        }
-    
-
-    
-}
-
-// //click card to select
-var count = 0
-var a = function select_card1(){
-//     // var card1 = document.querySelectorAll('.card-flip');
-//     // var card2 = document.querySelectorAll('.card-flip');
-//     // var y = card1.isSameNode(card2); 
-
-    var inputs = document.querySelector('.card-flip');
-   var me =  inputs.getAttribute('value');
+        //disable selected card
+        item.classList.add('disable-card');
 
 
-count++;
-console.log(count);
-if(count == 1){
+        var len = openedCards.length;
+         if(len === 2){
+            // moveCounter();
+                if(openedCards[0] === openedCards[1]){
+                    we();
+                } 
+                else {
+                    them()
+                }
 
-    console.log('card1: ' + me);
-    return me;
-;}
-}
-// var card_1 = select_card1();
-// console.log(card_1);
+                openedCards = [];
+         }
 
-var count1 = 0;
-
-
-var b = function select_card2(){
-//     // var card1 = document.querySelectorAll('.card-flip');
-//     // var card2 = document.querySelectorAll('.card-flip');
-//     // var y = card1.isSameNode(card2); 
-
-    var inputs = document.querySelector('.card-flip');
-   var us =  inputs.getAttribute('value');
-
-
-count1++;
-console.log(count1);
-if(count1 == 1){
-
-    
-    console.log('card2: ' + us);
-    return us;
-;}
-}
-
-// var card_2 = select_card2();
-
-// console.log(card_2);
-
-
-
-//    console.log(me1);
-//    //console.log(us);
-//     //console.log(Arr);
-
-//     // console.log(card1);
-//     // console.log(card2);
-
-//     // console.log(y);
-
-
-// function setupCookie() {
-//     document.cookie = document.cookie="click=1; expires=.......";
-// }
-function sss(){
-    if (a == b){
-        alert('yipp');
+    })});
+        
     }
-    else{
-        alert('up');
-    }
-}
-
-
-function card_select(){
     
-    //select_card2();
-    setupCookie();
-    sss();
+, 11000);
+
+
+//animations
+//pass
+function we(){
+let timer = setTimeout(function() {
+   // var u = document.createElement("p");
+   const months = ["Nice Match!", "Correct! Keep it Up!", "Great Memory!", "Awesome...", "Weldone!", " Good Job!"];
+
+const random = Math.floor(Math.random() * months.length);
+    var para = document.getElementById("alert1").innerHTML = months[random];
+   
+    
+    }, 500)
+
+    setTimeout(() =>{
+        var para2 = document.getElementById("alert1").innerHTML = ' ';
+    }, 3000)
 }
+//fail
+function them(){
+    const months = ["Oops! Wrong match", "Sorry. Incorrect", "Wrong Answer", "Oops! incorrect Answer"];
 
+const random = Math.floor(Math.random() * months.length);
 
-
-
-// create a one-time event
-document.querySelector('.card-flip').addEventListener("click", function us() {
-    console.log('u');
-});
-
-// handler function
-// function handler(e) {
-// 	// remove this handler
-// 	e.target.removeEventListener(e.type, arguments.callee);
-
-// 	alert("You'll only see this once!");
-// }
+    let timer = setTimeout(function() {
+       // var u = document.createElement("p");
+        var para = document.getElementById("alert2").innerHTML = months[random];
+      // para.classList.add('animated swing');
+        
+        }, 500)
+    
+        setTimeout(() =>{
+            var para2 = document.getElementById("alert2").innerHTML = ' ';
+        }, 3000)
+    }

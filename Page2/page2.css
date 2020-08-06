@@ -77,3 +77,17 @@
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
+
+.disable-card{
+    pointer-events:none;
+}
+
+#alert1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: green;
+}
+
+#alert2{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: red;
+}
