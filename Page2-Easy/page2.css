@@ -62,7 +62,7 @@
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transform-origin: 50% 50%;
+   
 }
 
 .card-flip div {
