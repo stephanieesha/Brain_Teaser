@@ -4,210 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="./page2.css">
+    
     <title>page2</title>
 </head>
-<body>
+<body onload="page_load()">
     <div class="container-fluid">
+        
         <!--header-->
         <div class="row">
             <div class="col-md-2 col-sm-12 col-xs-12">
                 <h3>EM GAME</h3>
+                <audio src="../Audio/game2.mp3" id="game_on" autoplay loop ></audio>
             </div>
 
             <div class="col-md-6"></div>
 
             <div class="col-md-4 col-sm-12 col-xs-12" id="nav-wrap">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">Home</a>
+                    <a class="navbar-brand" href="../Page1/index.html">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Demo <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link active" href="#">Contact</a>
-                        <a class="nav-item nav-link active" href="#">FeedBack</a>
+                        <a class="nav-item nav-link active" href="../Nav_pages/About.html">About</a>
+                        <a class="nav-item nav-link active" href="../Nav_pages/how_to_play.html">How to play</a>
+                        <a class="nav-item nav-link active" href="../Nav_pages/contact.html">Contact</a>
                       </div>
                     </div>
                   </nav>
             </div>
         </div>
 
-        <div class="the_body">
-          
+        <div class="main">
+            
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12"></div>
+                <div class="col-md-4 col-sm-12 col-xs-12 message">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <span>Hello </span>
+                            <span id="player-name"></span>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div id="alert1" class="animated flash infinite justify-content-center" >
+                                <audio src="../Audio/fail.mp3" ></audio>
+                            </div> 
+                            <div id="alert2" class="animated wobble infinite justify-content-center" >
+                                <audio src="../Audio/pass.mp3" ></audio>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12"></div> 
+           
             <div class="row">
                 
-                <div class="col-md-10 ">
-                    <div class="row the_row">
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card2.png" alt="Card image cap">
+                <div class="col-md-11 " id = deck> 
+                    <div class="row the_row" id="child1">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick=""  id="a">
+                            <a > <div class="card-flip match1" value="1" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas1.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
+                            </div></a>
+                        </div>
+                        
+                        <div class="col-md-2 col-sm-4 col-xs-4"  onclick="">
+                            <a   ><div class="card-flip match2" value="2" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas2.png" alt="Card image cap">
+                                </div>
+
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
+                                </div></a>
                             </div>
                         </div>
                         
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card3.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4"  onclick="">
+                            <a><div class="card-flip match3" value="3" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas3.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card4.png" alt="Card image cap">
-                                </div>
-
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
-                                </div>
-                            </div>
+                            </div></a>
                         </div>
 
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card5.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4"  onclick="">
+                            <a> <div class="card-flip match4" value="4" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas4.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
 
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card6.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="">
+                            <a> <div class="card-flip match5" value="5" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas5.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
 
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card7.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="">
+                            <a><div class="card-flip match6" value="6" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas7.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
                        
                     </div>
 
-                    <div class="row the_row">
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card2.png" alt="Card image cap">
+                  
+                    <div class="row the_row" id="child2">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="">
+                           <a><div class="card-flip match1" value="1" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas1.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a> 
                         </div>
                         
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card3.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="">
+                            <a> <div class="card-flip match2" value="2" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas2.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a> 
                         </div>
                         
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card4.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="" >
+                            <a><div class="card-flip match3" value="3" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas3.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a> 
                         </div>
 
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card5.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="">
+                            <a><div class="card-flip match4" value="4" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas4.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a> 
                         </div>
 
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card6.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="">
+                            <a></a><div class="card-flip match5" value="5" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas5.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a> 
                         </div>
 
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <div class="card-flip">
-                                <div class="card-front" style="width: 10em; height:15.5em">
-                                <img class="card-img-top img-fluid" src="./page2_images/card7.png" alt="Card image cap">
+                        <div class="col-md-2 col-sm-4 col-xs-4" onclick="">
+                         <a><div class="card-flip match6" value="6" data='1'>
+                                <div class="card-front" style="width: 9.5em; height:14.5em">
+                                <img class="card-img-top img-fluid" src="./page2_images/Eshas7.png" alt="Card image cap">
                                 </div>
 
-                                <div class="card-back" style="width: 10em; height:15.5em">
-                                    <img class="card-img-top img-fluid" src="./page2_images/back2.png" alt="Card image cap">
+                                <div class="card-back" style="width: 9.5em; height:14.5em">
+                                    <img class="card-img-top img-fluid" src="./page2_images/cardback1.jpg" alt="Card image cap">
                                 </div>
-                            </div>
+                            </div></a> 
                         </div>
                        
                     </div>
                 </div>
 
-                <div class="col-md-2">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="" > <a href="#" type="button" class="btn btn-primary ">Re</a></div>
-                        </div>
+                <div class="col-md-1 ">
+                    
+                            <div class="" > <a href="../Page1/index.html" type="button" class="btn btn-primary ">Restart</a></div><br><br>
+                       
 
-                        <div class="col-md-6">
-                            <div class="" > <a href="#" type="button" class="btn btn-primary btn-block">Score</a></div>
-                        </div>
-                    </div>
+                        
+                            <div class="ml-md-1 d-block" id="score"> 
+                                <div>
+                                    <span>Your Score: </span>
+                                    <span id="js-score"></span>
+                                </div>
+                                <div>
+                                    <span>Total is:  </span> 
+                                    <span id="js-total"></span>
+                                </div>
+                            </div>
+                        
+                    
                 </div>
             </div>
         </div>
     </div>
 
-
+    <script src="./page2.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="./bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
 </body>
 </html>
