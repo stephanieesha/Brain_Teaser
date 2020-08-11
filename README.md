@@ -1,3 +1,3 @@
 # Brain_Teaser
 
-In this game, there will be a card of 12 tiles in which two tiles (a pair) are identical. When I click two non identical tile, there should be an animated way of showing that my choice is wrong. When I click identical tiles, there should be another unique animated way of showing that my choice is right. When I successfully complete the game, I should have a congratulations message that shows me my score.
+In this game, there are 12 cards in which two cards each (a pair), are identical. When you click two non identical cards, there would be an animated way of showing that your choice is wrong. When you click identical cards, there would be another unique animated way of showing that your choice is right. When you successfully complete the game, you would get a congratulations message that shows your score.
