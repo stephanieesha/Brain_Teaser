@@ -19,14 +19,14 @@
         <div class="row">
             <div class="col-md-2 col-sm-12 col-xs-12">
                 <h3>EM GAME</h3>
-                <audio src="../Audio/game.mp3"  autoplay loop ></audio>
+                <audio src="../Audio/game2.mp3" id="game_on" autoplay loop ></audio>
             </div>
 
             <div class="col-md-6"></div>
 
             <div class="col-md-4 col-sm-12 col-xs-12" id="nav-wrap">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="../Page1/page1.html">Home</a>
+                    <a class="navbar-brand" href="../Page1/index.html">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -67,7 +67,7 @@
            
             <div class="row">
                 
-                <div class="col-md-10 " id = deck> 
+                <div class="col-md-11 " id = deck> 
                     <div class="row the_row" id="child1">
                         <div class="col-md-2 col-sm-4 col-xs-4" onclick=""  id="a">
                             <a > <div class="card-flip match1" value="1" data='1'>
@@ -220,14 +220,13 @@
                     </div>
                 </div>
 
-                <div class="col-md-2">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="" > <a href="../Page1/page1.html" type="button" class="btn btn-primary ">Restart</a></div>
-                        </div>
+                <div class="col-md-1 ">
+                    
+                            <div class="" > <a href="../Page1/index.html" type="button" class="btn btn-primary ">Restart</a></div><br><br>
+                       
 
-                        <div class="col-md-6">
-                            <div class="" id="score"> 
+                        
+                            <div class="ml-md-1 d-block" id="score"> 
                                 <div>
                                     <span>Your Score: </span>
                                     <span id="js-score"></span>
@@ -237,8 +236,8 @@
                                     <span id="js-total"></span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        
+                    
                 </div>
             </div>
         </div>

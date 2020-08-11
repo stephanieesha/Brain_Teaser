@@ -3,7 +3,8 @@
 }
 
 .the_row{
-    margin: 20px 0;
+    margin: 20px 0 20px 15px;
+    background-color: #FFB6C1;
 }
 
 .card-img-top{
@@ -14,6 +15,10 @@
 
     .main{
         padding: 0 15px
+    }
+
+    .card-flip{
+        margin-top: 5px;
     }
   
     .card-front{
@@ -30,10 +35,18 @@
     .the_row{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        margin: 20px 0 20px 0;
     }
 
     .card-img-top{
         border-radius: 0px;
+    }
+}
+
+@media (min-device-width: 992px) 
+{
+    #score{
+        width: 120px;
     }
 }
 
@@ -110,6 +123,6 @@
     color: white;
 }
 
-.modal.hidden {
-    display: none;
-  }
+#child1{
+    background-color: #FFB6C1;
+}
