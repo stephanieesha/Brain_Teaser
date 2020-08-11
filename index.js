@@ -1,6 +1,6 @@
  //easy level
     document.getElementById('easy').addEventListener('click', ()=>{
-    localStorage.setItem('name',  JSON.stringify(document.getElementById('easy').value)) ;
+    //localStorage.setItem('name',  JSON.stringify(document.getElementById('easy').value)) ;
     //var d = localStorage.getItem('name')
 
     //set players name
@@ -12,7 +12,7 @@
 
 //normal level
     document.getElementById('normal').addEventListener('click', ()=>{
-    localStorage.setItem('name', JSON.stringify(document.getElementById('normal').value)) ;
+   // localStorage.setItem('name', JSON.stringify(document.getElementById('normal').value)) ;
     //var d = localStorage.getItem('name')
 
     //set players name
@@ -24,7 +24,7 @@
 
 //hard level
     document.getElementById('hard').addEventListener('click', ()=>{
-    localStorage.setItem('name', JSON.stringify(document.getElementById('hard').value)) ;
+   // localStorage.setItem('name', JSON.stringify(document.getElementById('hard').value)) ;
     //var d = localStorage.getItem('name')
 
    //set players name

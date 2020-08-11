@@ -12,8 +12,8 @@
 
 
 //level speed
-    ddd = JSON.parse(localStorage.getItem('name'));
-    bbb = parseInt(ddd);
+    //ddd = JSON.parse(localStorage.getItem('name'));
+    bbb = 2000;
 
 
 //get players name

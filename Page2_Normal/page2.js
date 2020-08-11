@@ -8,12 +8,12 @@
 
 //adjust speed based on player's level
     var bbb;
-    var ddd;
+    //var ddd;
 
 
 //level speed
-    ddd = JSON.parse(localStorage.getItem('name'));
-    bbb = parseInt(ddd);
+    //ddd = JSON.parse(localStorage.getItem('name'));
+    bbb = 1000;
 
 
 //get players name
