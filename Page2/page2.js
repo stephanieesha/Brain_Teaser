@@ -12,13 +12,13 @@
 
 
 //level speed
-    ddd = localStorage.getItem('name');
+    ddd = JSON.parse(localStorage.getItem('name'));
     bbb = parseInt(ddd);
 
 
 //get players name
     var aaa;
-    aaa = localStorage.getItem('input');
+    aaa = JSON.parse(localStorage.getItem('input'));
     console.log(aaa);
     document.getElementById('player-name').innerHTML = `${aaa},`;
     if(aaa == '')document.getElementById('player-name').innerHTML = 'Player,';
