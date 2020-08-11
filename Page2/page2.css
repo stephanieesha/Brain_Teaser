@@ -1,4 +1,4 @@
-.the_body{
+.main{
     background-color: #DB7093;
 }
 
@@ -11,6 +11,10 @@
 }
 
 @media (max-width: 480px) {
+
+    .main{
+        padding: 0 15px
+    }
   
     .card-front{
         width: 3.5em !important;
@@ -85,9 +89,27 @@
 #alert1{
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: green;
+   
 }
 
 #alert2{
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: red;
+    
 }
+
+.message{
+    font-size: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#score{
+    background-color: black;
+    height: 50px;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+}
+
+.modal.hidden {
+    display: none;
+  }

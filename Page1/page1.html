@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="./page1.css">
     <title>Home</title>
 </head>
@@ -22,9 +26,9 @@
                 <h3>EM GAME</h3>
             </div>
 
-            <div class="col-md-6"></div>
+            <div class="col-md-5"></div>
 
-            <div class="col-md-4 col-sm-12 col-xs-12" id="nav-wrap">
+            <div class="col-md-5 col-sm-12 col-xs-12" id="nav-wrap">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +36,9 @@
                 </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Demo <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link active" href="#">Contact</a>
-                        <a class="nav-item nav-link active" href="#">FeedBack</a>
+                        <a class="nav-item nav-link active" href="../Nav_pages/About.html">About<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link active" href="../Nav_pages/how_to_play.html">How to play</a>
+                        <a class="nav-item nav-link active" href="../Nav_pages/contact.html">Contact</a>
                       </div>
                     </div>
                   </nav>
@@ -53,21 +57,24 @@
                     <div class="col-md-10 col-sm-12 col-xs-12">
                         <div class="right-text">
                             <div class="inner-text ">
-                                <h3>WELCOME TO ESHAS MEMORY GAME</h3>
-                                <p>Test and Improve your memory</p>
+                                <h3 style=" word-spacing: 10px">WELCOME TO ESHA'S MEMORY GAME</h3> <br>
+                                <p>Test and Improve your memory with our fun card game</p>
                             </div>
 
                             <div class="enter_name">
                                 <label for="player_name">Please Enter Your Name</label>
-                                <div style="padding-top: 20px;"><input type="text" name="player_name" class="form-control"></div>
+                                <div style="background-color: white;"><input type="text" name="player_name" class="form-control" id="the-input"></div>
                             </div>
                             <div class="level">
-                                <div style="padding-bottom: 20px ;"><label for="player_name">Please Select a Level</label></div>
+                                <div style="padding-bottom: 0px ;"><label for="player_name">Please Select a Level</label></div>
 
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-12 col-xs-12 but" > <a href="#" type="button" class="btn btn-primary btn-block">Easy</a></div>
-                                    <div class="col-md-4 col-sm-12 col-xs-12 but" ><a href="#" type="button" class="btn btn-primary btn-block">Normal</a></div>
-                                    <div class="col-md-4 col-sm-12 col-xs-12 but" ><a href="#" type="button" class="btn btn-primary btn-block">Hard</a></div>
+                                    <div class="col-md-4 col-sm-12 col-xs-12 but" > <a href="../Page2/page2.html" ><button type="button" class="btn btn-primary btn-block" value = '2000' id="easy" > Easy</button></a></div>
+
+                                    <div class="col-md-4 col-sm-12 col-xs-12 but" > <a href="../Page2/page2.html" ><button type="button" class="btn btn-primary btn-block" value = '1000' id="normal"> Normal</button></a></div>
+
+                                    <div class="col-md-4 col-sm-12 col-xs-12 but" > <a href="../Page2/page2.html" ><button type="button" class="btn btn-primary btn-block" value = '500' id="hard"> Hard</button></a></div>
+
 
                                 </div>
                             </div>
@@ -81,7 +88,9 @@
         </div>
 
     </div>
-   
+    <script src="./page1.js"></script>
+    <script src="../Page2/page2.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
