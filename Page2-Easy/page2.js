@@ -110,8 +110,7 @@
             openedCards.push(card_value);
             console.log(openedCards);
 
-            //disable selected card
-            item.classList.add('disable-card');
+           
 
 
             var len = openedCards.length;
@@ -131,6 +130,9 @@
                         var final_score = openedCards5.reduce((x,y) => x + y);
                        // console.log(final_score);
                         document.getElementById('js-score').innerHTML = final_score;
+
+                         //disable selected card
+                         item.classList.add('disable-card');
                     
                     } 
                     else {
