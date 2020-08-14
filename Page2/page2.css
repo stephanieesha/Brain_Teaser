@@ -95,6 +95,14 @@
     transform: rotateY( 180deg );
 }
 
+.flipped_wrong {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    transition-delay: 5s;
+}
+
 .disable-card{
     pointer-events:none;
 }

@@ -28,7 +28,7 @@
 //flip cards after shuffle
     function flip_time(){
 
-        setTimeout(function(){
+        setTimeout(() => {
             let my_elements = document.querySelectorAll('.card-flip ');
 
             let new_elements = my_elements.forEach( x => x.classList.add('flipped'));
@@ -44,6 +44,12 @@
     item.addEventListener('click', event => item.classList.toggle('flipped'))
     });
             
+
+    function click_flip(){
+        document.querySelectorAll('.card-flip').forEach(item => {
+            item.addEventListener('click', event => item.classList.toggle('flipped'))
+            });
+    }
 
 
 //get card data-value
@@ -92,6 +98,26 @@
             
     }
 
+
+//get total attempts
+    setTimeout(()=> {
+        var y = [];
+        document.querySelectorAll('.card-flip').forEach( (n)=> {
+        n.addEventListener('click', event => {
+
+        counttttt = 0;
+        counttttt++;
+        var l = y.push(counttttt);
+
+        //display attempts
+        let attempt = l/2;
+        if(Number.isInteger(attempt) == true)  document.getElementById("js-total").innerHTML = attempt;
+    
+        
+        })
+    });
+    }, bbb * 5);
+
 //compare selected cards
     setTimeout(function(){
     
@@ -100,18 +126,28 @@
 
     var openedCards = [];
     var openedCards5 = [];
+    var flip_cards = [];
+    var disabled_cards = [];
 
     document.querySelectorAll('.card-flip').forEach(item => {
         item.addEventListener('click', event => {
 
             var inputs = document.querySelector('.card-flip');
             var card_value =  item.getAttribute('value');
+           // var cards_ = item.getElementsByClassName('card-flip');
         
+             //disable selected card
+             item.classList.add('disable-card');
+
+
+            //push card values into an array
             openedCards.push(card_value);
             console.log(openedCards);
 
-            //disable selected card
-            item.classList.add('disable-card');
+            //push selected cards into an array
+            flip_cards.push(item);
+            console.log(flip_cards);
+           
 
 
             var len = openedCards.length;
@@ -125,75 +161,61 @@
                         //pass animation
                         we();
 
+                        //get number of disabled cards
+                        disabled_cards.push(item);
+                        console.log(disabled_cards);
+                        
+                        
                         //get player's score count
                         score_count++;
                         openedCards5.push(score_count);
                         var final_score = openedCards5.reduce((x,y) => x + y);
-                       // console.log(final_score);
+                        
+
+                       // display player's score
                         document.getElementById('js-score').innerHTML = final_score;
-                    
+
+                        //end game
+                        if(final_score == 6) end_game();
+                        
+                       
                     } 
                     else {
                         //fail animation
                         them()
+                        
+                        //reenable cards that don't match
+                        flip_cards[0].classList.remove('disable-card');
+                        flip_cards[1].classList.remove('disable-card');
+
+                        //flip back cards thar don't match 
+                        flip_cards[0].classList.add('flipped');
+                        flip_cards[1].classList.add('flipped');
+   
                     }
                     //console.log(openedCards);
                     openedCards = [];
+                    flip_cards = [];
                     
                 }
+                if( document.querySelectorAll('.card-flip').item.disabled == true){
+                    alert('done');
+                }
+                
             })}); }, (bbb * 5) + 1);
 
 
-//get total score
-    setTimeout(()=> {
-        var y = [];
-        document.querySelectorAll('.card-flip').forEach( (n)=> {
-        n.addEventListener('click', event => {
 
-        counttttt = 0;
-        counttttt++;
-        var l = y.push(counttttt);
-        
-        switch(l){
-            case 2:
-                document.getElementById("js-total").innerHTML = 1;
-            break;
+//display players score when game ends
+    function end_game(){
+        let players_score = document.getElementById("js-score").innerHTML;
+        let total_trials = document.getElementById("js-total").innerHTML;
+        let result = (players_score / total_trials) ;
+        alertify.alert(`CONGRATULATIONS!!! ${aaa}` ,` Your average is ${result.toFixed(2) * 100} %` ,  () => { alertify.success("Click 'Restart' to play again");
+        playAudio('../Audio/congratulations.wav');
+     });
 
-            case 4:
-                document.getElementById("js-total").innerHTML = 2;
-            break;
-
-            case 6:
-                document.getElementById("js-total").innerHTML = 3;
-            break;
-
-            case 8:
-                document.getElementById("js-total").innerHTML = 4;
-            break;
-
-            case 10:
-                document.getElementById("js-total").innerHTML = 5;
-            break;
-
-            case 12:
-                document.getElementById("js-total").innerHTML = 6;
-            
-            //display alert when user finishes the game
-            //if(a === null || a === '') a = 'Player';
-                alertify.alert(`CONGRATULATIONS!!! ${aaa}` ,` Your score is ${document.getElementById("js-score").innerHTML} out of ${document.getElementById("js-total").innerHTML}` ,  () => { alertify.success("Click 'Restart' to play again");
-                playAudio('../Audio/congratulations.wav');
-             });
-
-            //stop game sound
-            var x = document.getElementById("game_on");
-                x.pause();
-                
-            break;
-            }
-        
-        })
-    });
-    }, bbb * 5);
+    }
 
 
 
