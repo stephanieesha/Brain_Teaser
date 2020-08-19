@@ -5,7 +5,6 @@
         test(); 
     }
 
-
 //adjust speed based on player's level
     var bbb;
     var ddd;
