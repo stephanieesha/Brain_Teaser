@@ -34,7 +34,7 @@
                 
             }
             
-        , bbb * 5);
+        , bbb * 7);
     }
 
 
@@ -93,7 +93,7 @@
             //end shuffle
             setTimeout(() =>{
                 clearInterval(stop_interval);
-            }, bbb * 3)
+            }, bbb * (2000/bbb));
             
     }
 
@@ -115,7 +115,7 @@
         
         })
     });
-    }, bbb * 5);
+    }, bbb * 7);
 
 //compare selected cards
     setTimeout(function(){
@@ -201,7 +201,7 @@
                     alert('done');
                 }
                 
-            })}); }, (bbb * 5) + 1);
+            })}); }, (bbb * 7) + 1);
 
 
 
