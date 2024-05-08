@@ -53,6 +53,7 @@
 .card-flip {
     width: 100%;
     height: 100%;
+
     
     -webkit-transition: -webkit-transform 1s;
     -moz-transition: -moz-transform 1s;
@@ -95,6 +96,11 @@
     -moz-transform: rotateY( 180deg );
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
+    /* display: none; */
+}
+
+.oz {
+       display: none;
 }
 
 .flipped_wrong {
