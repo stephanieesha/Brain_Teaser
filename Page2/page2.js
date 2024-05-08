@@ -29,8 +29,15 @@
 
         setTimeout(() => {
             let my_elements = document.querySelectorAll('.card-flip ');
+            
+
+            // new 8/04/2024
+
 
             let new_elements = my_elements.forEach( x => x.classList.add('flipped'));
+
+            let flipped_img = document.querySelectorAll('.back');
+            flipped_img.forEach(x => x.style.display = "block")
                 
             }
             
@@ -41,15 +48,14 @@
 //flip card on click
     document.querySelectorAll('.card-flip').forEach(item => {
     item.addEventListener('click', event => item.classList.toggle('flipped'))
+   
+
     });
-            
-
-    function click_flip(){
-        document.querySelectorAll('.card-flip').forEach(item => {
-            item.addEventListener('click', event => item.classList.toggle('flipped'))
-            });
-    }
-
+    document.querySelectorAll('.back').forEach(item => {
+        item.addEventListener('click', event => item.style.display = "none")
+       
+    
+        });
 
 //get card data-value
     function test(){       
